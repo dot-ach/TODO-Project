@@ -8,6 +8,15 @@ function App() {
       <TodoItem />
       <TodoItem />
       <TodoItem />
+
+      <TodoCounter  
+        completed={4}
+        total={5}
+      />
+      <TodoCounter  
+        completed={2}
+        total={10}
+      />
       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -37,4 +46,11 @@ function TodoItem(){
   );
 }
 
+function TodoCounter(props){
+  return(
+    <p>
+      Tienes {props.completed} TODOs hechos de {props.total}
+    </p>
+  );
+}
 export default App;
