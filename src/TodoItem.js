@@ -1,9 +1,13 @@
-function TodoItem(){
+function TodoItem({text, completed}){
+  let icon = 'X';
+  if (completed){
+    icon = "V";
+  }
   return(
     <li>
-      <span>V</span>
-      <p>Llorar con la Llorona</p>
-      <span>X</span>
+      {/* <span>V</span> */}
+      <p>{text}</p>
+      <span>{icon}</span>
     </li>
   );
 };
