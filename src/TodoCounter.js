@@ -2,15 +2,15 @@ import "./TodoCounter.css";
 
 function TodoCounter({completed, total}){
   return(
-    <h1>
+    <h1 className="TodoCounter">
       Has completado 
-      <strong>
+      <span>
         {completed} 
-      </strong>
+      </span>
       de 
-      <strong>
+      <span>
         {total}
-      </strong> TODOs.
+      </span> TODOs.
     </h1>
   );
 };

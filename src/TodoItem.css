@@ -2,7 +2,7 @@
   --X-color: #a9f800;
   --V-color: #f8df00;
 }
-li{
+.TodoItem{
   display: flex;
   display: flex;
   align-items: center;
@@ -16,12 +16,15 @@ li{
   width: 250px;
   padding: 10px;
 }
-li span:nth-child(1){
+.TodoItem .Icon-check{
   margin-right: 8px;
   font-size: 20px;
   cursor: pointer;
 }
-li span:nth-child(3){
+.TodoItem .TodoItem-p--completed{
+  text-decoration: line-through;
+}
+.TodoItem .Icon-delete{
   position: relative;
   bottom: 36px;
   left: 16px;
@@ -30,6 +33,6 @@ li span:nth-child(3){
   color: #f8df00;
   /* color: #f8a100; */
 }
-li span:nth-child(3):hover{
+.TodoItem .Icon-delete:nth-child(3):hover{
   color: red;
 }
