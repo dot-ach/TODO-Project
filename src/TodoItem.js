@@ -4,7 +4,7 @@ function TodoItem({ text, completed }) {
   // if (completed){
   //   icon = "V";
   // }
-  // console.log(completed)
+  // console.log(completed) 
   return (
     <li className="TodoItem">
       <span className="Icon Icon-check Icon-check--active">
