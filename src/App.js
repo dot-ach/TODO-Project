@@ -13,12 +13,9 @@ const defaultTodos = [
 ]
 
 function App() {
-
-  console.log(defaultTodos);
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState('');
-  console.log(`Buscando: ${searchValue}`);
-
+  
   const totalTodos = todos.length;
   const completedTodos = todos.filter(todo => !!todo.completed).length;
 
@@ -28,9 +25,25 @@ function App() {
     return todoText.includes(searchText);
   })
 
-  // setTodos()
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    );
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+    console.log('executed')
+  }
 
-  console.log({totalTodos, completedTodos});
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    );
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  }
+
   return (
     <>
     
@@ -49,6 +62,8 @@ function App() {
             text={todo.text} 
             completed={todo.completed} 
             key={todo.text}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
           />
         ))}
       </TodoList>
