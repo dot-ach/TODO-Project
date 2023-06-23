@@ -30,9 +30,14 @@ function App() {
     const todoIndex = newTodos.findIndex(
       (todo) => todo.text === text
     );
-    newTodos[todoIndex].completed = true;
+    if(newTodos[todoIndex].completed){
+      newTodos[todoIndex].completed = false;
+    }
+    else{
+      newTodos[todoIndex].completed = true;
+    }
+    // newTodos[todoIndex].completed = true;
     setTodos(newTodos);
-    console.log('executed')
   }
 
   const deleteTodo = (text) => {
