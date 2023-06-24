@@ -1,0 +1,38 @@
+:root{
+  --X-color: #a9f800;
+  --V-color: #f8df00;
+}
+.TodoItem{
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  border: 2px solid #f800aa;
+  border-radius: 4px;
+  /* background-color: red; */
+  margin-bottom: 20px;
+  height: 40px;
+  width: 250px;
+  padding: 10px;
+}
+.TodoItem .Icon-check{
+  margin-right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.TodoItem .TodoItem-p--completed{
+  text-decoration: line-through;
+}
+.TodoItem .Icon-delete{
+  position: relative;
+  bottom: 36px;
+  left: 16px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #f8df00;
+  /* color: #f8a100; */
+}
+.TodoItem .Icon-delete:nth-child(3):hover{
+  color: red;
+}

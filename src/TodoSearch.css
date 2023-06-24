@@ -1,0 +1,14 @@
+.TodoSearch{
+  width: 180px;
+  height: 32px;
+  padding: 0 2px;
+  text-align: center;
+  border: 2px solid #f800aa;
+  border-radius: 4px;
+  background-color: white;
+}
+.TodoSearch:focus{
+  background-color:#ffb8e9;
+  border: 2px solid white;
+  outline: none;
+}
