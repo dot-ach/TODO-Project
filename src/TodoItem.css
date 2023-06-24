@@ -18,7 +18,12 @@
 }
 .TodoItem .Icon-check{
   margin-right: 8px;
+  margin-top: 4px;
   font-size: 20px;
+  cursor: pointer;
+}
+.TodoItem .Icon-check--active{
+  margin-top: 4px;
   cursor: pointer;
 }
 .TodoItem .TodoItem-p--completed{
@@ -26,8 +31,8 @@
 }
 .TodoItem .Icon-delete{
   position: relative;
-  bottom: 36px;
-  left: 16px;
+  bottom: 30px;
+  left: 24px;
   cursor: pointer;
   font-size: 30px;
   color: #f8df00;
