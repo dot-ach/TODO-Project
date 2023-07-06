@@ -12,8 +12,6 @@ import { useLocalStorage } from './useLocalStorage';
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 // localStorage.Item('TODOS_V1');
 
-
-
 function App() {
 
   const [todos, saveTodos] = useLocalStorage('TODOS', []);
@@ -21,6 +19,20 @@ function App() {
 
   const totalTodos = todos.length;
   const completedTodos = todos.filter(todo => !!todo.completed).length;
+
+console.log('log 1');
+
+// React.useEffect(() => {
+//   console.log('log 2');
+// });
+// React.useEffect(() => {
+//   console.log('log 2');
+// },[]);
+React.useEffect(() => {
+  console.log('log 2');
+},[totalTodos]);
+
+console.log('log 3');
 
   const searchedTodos = todos.filter((todo) => {
     const todoText = todo.text.toLowerCase();
