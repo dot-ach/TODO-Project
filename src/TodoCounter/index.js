@@ -1,7 +1,14 @@
 import "./TodoCounter.css";
 
-function TodoCounter({completed, total}){
-  if(completed === total){
+function TodoCounter({completed, total, loading}){
+  if(loading){
+    return(
+      <h1  className="TodoCounter">
+        <span>Cargando...</span>
+      </h1>
+    );
+  }else if(completed === total){
+    
     return(
       <h1  className="TodoCounter">
         <span>Felicidades!!</span>. Haz completado todos tus <span>TODOs</span>
