@@ -8,7 +8,7 @@ import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
-
+import { TodoForm } from '../TodoForm';
 import { TodoContext } from '../TodoContext';
 
 function AppUi() {
@@ -62,7 +62,7 @@ function AppUi() {
 
       {openModal && (
         <Modal>
-          la funcionalidad de agregar TODO
+          <TodoForm />
         </Modal>
       )}
     </>

@@ -1,0 +1,56 @@
+.Form-Container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 120px;
+  background-color: white;
+  color: black;
+  border: 4px solid #f800aa;
+  border-radius: 4px;
+  padding: 8px;
+}
+.Form-P{
+  margin-bottom: 4px;
+}
+.Form-Input{
+  width: 90%;
+  height: 40%;
+  margin-bottom: 6px;
+  border: 2px solid #ffb8e9;
+  border-radius: 4px;
+}
+.Form-Input:focus{
+  background-color:#ffb8e9;
+  border: 2px solid white;
+  outline: none;
+}
+.Buttons-Container_Form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Button{
+  cursor: pointer;
+  width: 38%;
+  padding: 2px;
+  
+}
+
+.Button-Add{
+  background-color: #f800aa;
+  border: 2px solid #ffb8e9;
+  border-radius: 3px;
+  color: white;
+}
+.Button-Close{
+  background-color: #f80042;
+  border: 2px solid #ffb8e9;
+  border-radius: 3px;
+  color: white;
+}
+
+.Button:hover{
+  color: black;
+}
