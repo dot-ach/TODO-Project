@@ -7,7 +7,7 @@ function TodoCounter(){
   const {
     completedTodos,
     totalTodos,
-    loading} = React.useContext(TodoContext)
+    loading} = React.useContext(TodoContext);
   
   if(loading){
     return(
