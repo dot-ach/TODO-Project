@@ -3,16 +3,27 @@ import { TodoContext } from "../TodoContext";
 import "./TodoForm.css"
 
 function TodoForm() {
-  const { setOpenModal } = React.useContext(TodoContext)
+  const { 
+    setOpenModal,
+    addTodo
+  } = React.useContext(TodoContext)
   return (
-    <div className="Form-Container">
-      <p className="Form-P">Crea un Nuevo TODO</p>
-      <input
+    <form className="Form-Container">
+      <label className="Form-P">Crea un Nuevo TODO</label>
+      <textarea
         placeholder="Escribe un nuevo Todo"
         className="Form-Input"
       />
       <div className="Buttons-Container_Form">
-        <button className="Button-Add Button">Add</button>
+        <button 
+        className="Button-Add Button"
+        type="button"
+        onClick={(event) => {
+          // console.log(event.target.form[0].value);
+          const newTodoText = event.target.form[0].value;
+          addTodo(newTodoText);
+        }}
+        >Add</button>
         <button
           className="Button-Close Button"
           onClick={(event) => {
@@ -20,7 +31,7 @@ function TodoForm() {
             setOpenModal(false);
           }}>Close</button>
       </div>
-    </div>
+    </form>
   );
 };
 
