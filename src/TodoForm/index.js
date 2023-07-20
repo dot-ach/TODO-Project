@@ -22,6 +22,7 @@ function TodoForm() {
           // console.log(event.target.form[0].value);
           const newTodoText = event.target.form[0].value;
           addTodo(newTodoText);
+          setOpenModal(false)
         }}
         >Add</button>
         <button
