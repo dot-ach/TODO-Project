@@ -1,9 +1,10 @@
+import "./Modal.css"
 import React from "react";
 import  ReactDOM  from "react-dom";
 
 function Modal({children}){
   return ReactDOM.createPortal(
-    <div className="Modal">
+    <div className="Modal-Parent">
       {children}
     </div>, 
     document.getElementById('modal')
