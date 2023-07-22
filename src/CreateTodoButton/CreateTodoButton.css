@@ -8,6 +8,7 @@
   text-align: center;
   color: #f8df00;
   border-radius: 10px;
+  margin-bottom: 20px
 }
 .CreateTodoButton:hover{
   background-color: #ffb8e9;

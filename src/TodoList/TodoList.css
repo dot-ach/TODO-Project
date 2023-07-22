@@ -1,6 +1,6 @@
 ul{
   padding: 12px;
-  height: 400px;
+  max-height: 400px;
   overflow-x: auto;
   white-space: normal;
 }

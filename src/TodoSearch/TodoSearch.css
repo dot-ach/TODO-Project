@@ -1,6 +1,7 @@
 .TodoSearch{
   width: 180px;
-  height: 12%;
+  min-height: 30px;
+  max-height: 45px;
   padding: 0 2px;
   text-align: center;
   border: 2px solid #f800aa;
