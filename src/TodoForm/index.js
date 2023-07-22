@@ -6,13 +6,15 @@ function TodoForm() {
   const { 
     setOpenModal,
     addTodo
-  } = React.useContext(TodoContext)
+  } = React.useContext(TodoContext);
+
   return (
     <form className="Form-Container">
       <label className="Form-P">Crea un Nuevo TODO</label>
       <textarea
         placeholder="Escribe un nuevo Todo"
         className="Form-Input"
+        required='true'
       />
       <div className="Buttons-Container_Form">
         <button 
